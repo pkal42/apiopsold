@@ -1,0 +1,151 @@
+openapi: 3.0.1
+info:
+  title: Color API
+  description: Taste the rainbow
+  version: '1.0'
+servers:
+  - url: https://pkapimlab.azure-api.net/color
+paths:
+  /api/Colors:
+    get:
+      tags:
+        - Colors
+      summary: ApiColorsGet
+      operationId: ApiColorsGet
+      responses:
+        '200':
+          description: Success
+    post:
+      tags:
+        - Colors
+      summary: ApiColorsPost
+      operationId: ApiColorsPost
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/ColorItem'
+            example:
+              id: 0
+              name: string
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ColorItem'
+            example:
+              id: 0
+              name: string
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ColorItem'
+            example:
+              id: 0
+              name: string
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ColorItem'
+            example:
+              id: 0
+              name: string
+      responses:
+        '200':
+          description: Success
+  '/api/Colors/{id}':
+    get:
+      tags:
+        - Colors
+      summary: ApiColorsByIdGet
+      operationId: ApiColorsByIdGet
+      parameters:
+        - name: id
+          in: path
+          description: Format - int32.
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Colors
+      summary: ApiColorsByIdPut
+      operationId: ApiColorsByIdPut
+      parameters:
+        - name: id
+          in: path
+          description: Format - int32.
+          required: true
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/StrName'
+            example: string
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StrName'
+            example: string
+          text/json:
+            schema:
+              $ref: '#/components/schemas/StrName'
+            example: string
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/StrName'
+            example: string
+      responses:
+        '200':
+          description: Success
+    delete:
+      tags:
+        - Colors
+      summary: ApiColorsByIdDelete
+      operationId: ApiColorsByIdDelete
+      parameters:
+        - name: id
+          in: path
+          description: Format - int32.
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Success
+  /api/RandomColor:
+    get:
+      tags:
+        - RandomColor
+      summary: ApiRandomColorGet
+      operationId: ApiRandomColorGet
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    ColorItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+    StrName:
+      type: string
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

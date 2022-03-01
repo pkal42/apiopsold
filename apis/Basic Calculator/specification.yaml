@@ -106,14 +106,6 @@ paths:
       responses:
         '200':
           description: ''
-  /squares:
-    get:
-      summary: Squares
-      description: Produces a Square of a number
-      operationId: squares
-      responses:
-        '200':
-          description: ''
 components:
   securitySchemes:
     apiKeyHeader:

@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
   
 env:
-  AZURE_RESOURCE_GROUP_NAME: your-apim-resourceGroupName  # Replace this value with your resource group name
-  API_MANAGEMENT_SERVICE_NAME: your-apim-instanceName  # Replace this value with yourapim instance name 
+  AZURE_RESOURCE_GROUP_NAME: pkapimlab-rg  # Replace this value with your resource group name
+  API_MANAGEMENT_SERVICE_NAME: PKAPIMLab  # Replace this value with yourapim instance name 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

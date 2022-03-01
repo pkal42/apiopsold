@@ -1,0 +1,23 @@
+{
+  "name": "demo-conference-api-v2",
+  "properties": {
+    "apiRevision": "2",
+    "apiRevisionDescription": "Adding a caching policy",
+    "apiVersion": "v2",
+    "apiVersionSetId": "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlab-rg/providers/Microsoft.ApiManagement/service/PKAPIMLab/apiVersionSets/61f003ed10021639ffd4fb8b",
+    "authenticationSettings": {},
+    "description": "A sample API with information related to a technical conference.  The available resources  include *Speakers*, *Sessions* and *Topics*.  A single write operation is available to provide  feedback on a session.",
+    "displayName": "Demo Conference API",
+    "isCurrent": true,
+    "path": "conf",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://conferenceapi.azurewebsites.net",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

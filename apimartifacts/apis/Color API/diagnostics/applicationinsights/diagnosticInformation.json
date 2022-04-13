@@ -1,11 +1,8 @@
 {
   "name": "applicationinsights",
   "properties": {
-    "alwaysLog": "allErrors",
-    "httpCorrelationProtocol": "Legacy",
-    "logClientIp": true,
     "loggerId": "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlab-rg/providers/Microsoft.ApiManagement/service/pkapimlab/loggers/pkapimlab-ai",
-    "verbosity": "information",
+    "alwaysLog": "allErrors",
     "backend": {
       "request": {
         "body": {
@@ -34,9 +31,12 @@
         "headers": []
       }
     },
+    "httpCorrelationProtocol": "Legacy",
+    "logClientIp": true,
     "sampling": {
-      "percentage": 50.0,
+      "percentage": 50,
       "samplingType": "fixed"
-    }
+    },
+    "verbosity": "information"
   }
 }

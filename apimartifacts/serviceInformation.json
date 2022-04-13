@@ -1,15 +1,13 @@
 {
   "name": "PKAPIMLab",
   "location": "East US",
-  "tags": {},
   "sku": {
-    "name": "Developer",
-    "capacity": 1
-  },
-  "identity": {
-    "type": "SystemAssigned"
+    "capacity": 1,
+    "name": "Developer"
   },
   "properties": {
+    "publisherEmail": "prkalani@microsoft.com",
+    "publisherName": "Microsoft",
     "apiVersionConstraint": {},
     "customProperties": {
       "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168": "false",
@@ -22,24 +20,12 @@
       "Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2": "false"
     },
     "disableGateway": false,
-    "hostnameConfigurations": [
-      {
-        "type": "Proxy",
-        "hostName": "pkapimlab.azure-api.net",
-        "encodedCertificate": null,
-        "keyVaultId": null,
-        "certificatePassword": null,
-        "negotiateClientCertificate": false,
-        "certificate": null,
-        "defaultSslBinding": true,
-        "identityClientId": null,
-        "certificateSource": "BuiltIn",
-        "certificateStatus": null
-      }
-    ],
     "notificationSenderEmail": "apimgmt-noreply@mail.windowsazure.com",
-    "publisherEmail": "prkalani@microsoft.com",
-    "publisherName": "Microsoft",
+    "publicNetworkAccess": "Enabled",
     "virtualNetworkType": "None"
+  },
+  "tags": {},
+  "identity": {
+    "type": "SystemAssigned"
   }
 }

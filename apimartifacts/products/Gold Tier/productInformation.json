@@ -6,10 +6,5 @@
     "description": "Description of Gold Tier",
     "state": "published",
     "subscriptionRequired": true
-  },
-  "apis": [
-    {
-      "displayName": "Demo Conference API"
-    }
-  ]
+  }
 }

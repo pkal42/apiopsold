@@ -11,23 +11,23 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <cors allow-credentials="true">
-      <allowed-origins>
-        <origin>https://markcolorweb.azurewebsites.net</origin>
-      </allowed-origins>
-      <allowed-methods>
-        <method>*</method>
-      </allowed-methods>
-    </cors>
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+	<inbound>
+		<cors allow-credentials="true">
+			<allowed-origins>
+				<origin>https://markcolorweb.azurewebsites.net</origin>
+			</allowed-origins>
+			<allowed-methods>
+				<method>*</method>
+			</allowed-methods>
+		</cors>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

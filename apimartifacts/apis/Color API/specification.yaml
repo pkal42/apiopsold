@@ -11,6 +11,7 @@ paths:
       tags:
         - Colors
       summary: ApiColorsGet
+      description: ApiColorsGet
       operationId: ApiColorsGet
       responses:
         '200':
@@ -19,6 +20,7 @@ paths:
       tags:
         - Colors
       summary: ApiColorsPost
+      description: ApiColorsPost
       operationId: ApiColorsPost
       requestBody:
         content:
@@ -54,11 +56,12 @@ paths:
       tags:
         - Colors
       summary: ApiColorsByIdGet
+      description: ApiColorsByIdGet
       operationId: ApiColorsByIdGet
       parameters:
         - name: id
           in: path
-          description: Format - int32.
+          description: Format - int32. Format - int32.
           required: true
           schema:
             type: integer
@@ -70,11 +73,12 @@ paths:
       tags:
         - Colors
       summary: ApiColorsByIdPut
+      description: ApiColorsByIdPut
       operationId: ApiColorsByIdPut
       parameters:
         - name: id
           in: path
-          description: Format - int32.
+          description: Format - int32. Format - int32.
           required: true
           schema:
             type: integer
@@ -104,11 +108,12 @@ paths:
       tags:
         - Colors
       summary: ApiColorsByIdDelete
+      description: ApiColorsByIdDelete
       operationId: ApiColorsByIdDelete
       parameters:
         - name: id
           in: path
-          description: Format - int32.
+          description: Format - int32. Format - int32.
           required: true
           schema:
             type: integer
@@ -121,6 +126,7 @@ paths:
       tags:
         - RandomColor
       summary: ApiRandomColorGet
+      description: ApiRandomColorGet
       operationId: ApiRandomColorGet
       responses:
         '200':

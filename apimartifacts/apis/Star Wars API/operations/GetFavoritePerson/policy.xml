@@ -11,23 +11,23 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <base />
-    <send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
-      <set-url>https://pkapimlab-kv.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
-      <set-method>GET</set-method>
-      <authentication-managed-identity resource="https://vault.azure.net" />
-    </send-request>
-    <set-variable name="favoritePersonRequest" value="@{&#xA;            var secret = ((IResponse)context.Variables[&quot;secretResponse&quot;]).Body.As&lt;JObject&gt;();&#xA;            return &quot;/people/&quot; + secret[&quot;value&quot;].ToString() + &quot;/&quot;;&#xA;        }" />
-    <rewrite-uri template="@((string)context.Variables[&quot;favoritePersonRequest&quot;])" />
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+	<inbound>
+		<base />
+		<send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
+			<set-url>https://pkapimlab-kv.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
+			<set-method>GET</set-method>
+			<authentication-managed-identity resource="https://vault.azure.net" />
+		</send-request>
+		<set-variable name="favoritePersonRequest" value="@{&#xA;            var secret = ((IResponse)context.Variables[&quot;secretResponse&quot;]).Body.As&lt;JObject&gt;();&#xA;            return &quot;/people/&quot; + secret[&quot;value&quot;].ToString() + &quot;/&quot;;&#xA;        }" />
+		<rewrite-uri template="@((string)context.Variables[&quot;favoritePersonRequest&quot;])" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

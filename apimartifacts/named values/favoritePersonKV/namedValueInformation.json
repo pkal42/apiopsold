@@ -1,0 +1,11 @@
+{
+  "name": "favoritePerson",
+  "properties": {
+    "displayName": "favoritePersonKV",
+    "keyVault": {
+      "secretIdentifier": "https://pkapimlab-kv.vault.azure.net/secrets/favoritePerson"
+    },
+    "secret": true,
+    "tags": []
+  }
+}

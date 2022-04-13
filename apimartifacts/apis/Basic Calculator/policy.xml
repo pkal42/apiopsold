@@ -11,31 +11,31 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <base />
-    <choose>
-      <when condition="@(context.Product == null)">
-        <return-response response-variable-name="existing response variable">
-          <set-status code="500" reason="Internal Server Error" />
-          <set-header name="failure" exists-action="override">
-            <value>failure</value>
-          </set-header>
-          <set-body>Please select a product.</set-body>
-        </return-response>
-      </when>
-    </choose>
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-    <choose>
-      <when condition="@(context.Response.StatusCode == 200)">
-        <send-one-way-request mode="new">
-          <set-url>https://microsoft.webhook.office.com/webhookb2/2ad4c125-31ee-45dc-b31c-9d097e9ba66e@72f988bf-86f1-41af-91ab-2d7cd011db47/IncomingWebhook/62aeab68f80d46269347747fa1ac72ab/7914dca9-f7c0-46b5-bbd4-3e2dc71a9b2e</set-url>
-          <set-method>POST</set-method>
-          <set-body>@{
+	<inbound>
+		<base />
+		<choose>
+			<when condition="@(context.Product == null)">
+				<return-response response-variable-name="existing response variable">
+					<set-status code="500" reason="Internal Server Error" />
+					<set-header name="failure" exists-action="override">
+						<value>failure</value>
+					</set-header>
+					<set-body>Please select a product.</set-body>
+				</return-response>
+			</when>
+		</choose>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<choose>
+			<when condition="@(context.Response.StatusCode == 200)">
+				<send-one-way-request mode="new">
+					<set-url>https://microsoft.webhook.office.com/webhookb2/2ad4c125-31ee-45dc-b31c-9d097e9ba66e@72f988bf-86f1-41af-91ab-2d7cd011db47/IncomingWebhook/62aeab68f80d46269347747fa1ac72ab/7914dca9-f7c0-46b5-bbd4-3e2dc71a9b2e</set-url>
+					<set-method>POST</set-method>
+					<set-body>@{
                     return new JObject(
                     new JProperty("@type","MessageCard"),
                     new JProperty("@context", "http://schema.org/extensions"),
@@ -50,11 +50,11 @@
                     )
                     ).ToString();
                 }</set-body>
-        </send-one-way-request>
-      </when>
-    </choose>
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+				</send-one-way-request>
+			</when>
+		</choose>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

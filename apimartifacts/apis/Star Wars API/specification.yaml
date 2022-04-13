@@ -13,7 +13,7 @@ paths:
       operationId: getpeople
       responses:
         '200':
-          description: 
+          description: ''
   '/people/{id}/':
     get:
       summary: GetPeopleById
@@ -27,7 +27,7 @@ paths:
             type: ''
       responses:
         '200':
-          description: 
+          description: ''
   /film:
     get:
       summary: GetFilm
@@ -46,10 +46,11 @@ paths:
   /favorite:
     get:
       summary: GetFavoritePerson
+      description: GetFavoritePerson
       operationId: getfavoriteperson
       responses:
         '200':
-          description: 
+          description: ''
 components:
   securitySchemes:
     apiKeyHeader:

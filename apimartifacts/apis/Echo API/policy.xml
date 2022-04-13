@@ -11,9 +11,9 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <base />
-    <log-to-eventhub logger-id="eventHubLogger">
+	<inbound>
+		<base />
+		<log-to-eventhub logger-id="eventHubLogger">
             @{
                 return new JObject(
                 new JProperty("EventTime", DateTime.UtcNow.ToString()),
@@ -24,14 +24,14 @@
                 ).ToString();
             }
         </log-to-eventhub>
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

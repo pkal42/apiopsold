@@ -11,28 +11,28 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <base />
-    <set-query-parameter name="x-product-name" exists-action="override">
-      <value>@(context.Product.Name)</value>
-    </set-query-parameter>
-    <set-header name="x-request-context-data" exists-action="override">
-      <value>@(context.Deployment.Region)</value>
-    </set-header>
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-    <xml-to-json kind="direct" apply="always" consider-accept-header="false" />
-    <set-header name="x-aspnet-version" exists-action="delete" />
-    <set-header name="x-powered-by" exists-action="delete" />
-    <set-header name="x-request-received-time" exists-action="override">
-      <value>{{TimeNow}}</value>
-    </set-header>
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+	<inbound>
+		<base />
+		<set-query-parameter name="x-product-name" exists-action="override">
+			<value>@(context.Product.Name)</value>
+		</set-query-parameter>
+		<set-header name="x-request-context-data" exists-action="override">
+			<value>@(context.Deployment.Region)</value>
+		</set-header>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<xml-to-json kind="direct" apply="always" consider-accept-header="false" />
+		<set-header name="x-aspnet-version" exists-action="delete" />
+		<set-header name="x-powered-by" exists-action="delete" />
+		<set-header name="x-request-received-time" exists-action="override">
+			<value>{{TimeNow}}</value>
+		</set-header>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

@@ -1,20 +1,15 @@
 {
   "name": "color-api",
   "properties": {
-    "apiRevision": "1",
-    "authenticationSettings": {},
-    "description": "Taste the rainbow",
-    "displayName": "Color API",
-    "isCurrent": true,
     "path": "color",
+    "displayName": "Color API",
+    "apiRevision": "1",
+    "description": "Taste the rainbow",
+    "isCurrent": true,
     "protocols": [
       "https"
     ],
     "serviceUrl": "https://markcolorapi.azurewebsites.net/",
-    "subscriptionKeyParameterNames": {
-      "header": "Ocp-Apim-Subscription-Key",
-      "query": "subscription-key"
-    },
     "subscriptionRequired": true
   }
 }

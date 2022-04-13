@@ -11,15 +11,15 @@
             - Policies are applied in the order of their appearance, from the top down.
         -->
 <policies>
-  <inbound>
-    <rate-limit calls="10" renewal-period="60" />
-    <quota calls="100" renewal-period="604800" />
-    <base />
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-  </outbound>
+	<inbound>
+		<rate-limit calls="10" renewal-period="60" />
+		<quota calls="100" renewal-period="604800" />
+		<base />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
 </policies>

@@ -8,28 +8,5 @@
     "subscriptionRequired": true,
     "subscriptionsLimit": 1,
     "terms": ""
-  },
-  "apis": [
-    {
-      "displayName": "Basic Calculator"
-    },
-    {
-      "displayName": "Color API"
-    },
-    {
-      "displayName": "Demo Conference API"
-    },
-    {
-      "displayName": "Echo API"
-    },
-    {
-      "displayName": "Echo API"
-    },
-    {
-      "displayName": "Star Wars API"
-    },
-    {
-      "displayName": "Star Wars API"
-    }
-  ]
+  }
 }

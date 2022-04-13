@@ -11,20 +11,20 @@
     - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
 -->
 <policies>
-  <inbound>
-    <base />
-    <set-header name="Accept-Encoding" exists-action="override">
-      <value>deflate</value>
-    </set-header>
-  </inbound>
-  <backend>
-    <base />
-  </backend>
-  <outbound>
-    <base />
-    <choose>
-      <when condition="@(context.Response.StatusCode == 200 &amp;&amp; context.Product.Name.Equals(&quot;Starter&quot;))">
-        <set-body>@{
+	<inbound>
+		<base />
+		<set-header name="Accept-Encoding" exists-action="override">
+			<value>deflate</value>
+		</set-header>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<choose>
+			<when condition="@(context.Response.StatusCode == 200 &amp;&amp; context.Product.Name.Equals(&quot;Starter&quot;))">
+				<set-body>@{
                         var response = context.Response.Body.As&lt;JObject&gt;();
                         foreach (var key in new [] {"hair_color", "skin_color", "eye_color", "gender"}) {
                             response.Property(key).Remove();
@@ -32,10 +32,10 @@
                         return response.ToString();
                     }
                 </set-body>
-      </when>
-    </choose>
-  </outbound>
-  <on-error>
-    <base />
-  </on-error>
+			</when>
+		</choose>
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
 </policies>

@@ -6,6 +6,8 @@ on:
     branches: [ main ]
     types: [closed]
     
+  workflow_dispatch:
+    
 jobs:
   get-commit:
     runs-on: ubuntu-latest

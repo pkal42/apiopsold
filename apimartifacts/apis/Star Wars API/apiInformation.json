@@ -1,0 +1,22 @@
+{
+  "name": "star-wars-v2;rev=3",
+  "properties": {
+    "apiRevision": "3",
+    "apiRevisionDescription": "increased caching time",
+    "apiVersion": "v2",
+    "apiVersionSetId": "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlab-rg/providers/Microsoft.ApiManagement/service/pkapimlab/apiVersionSets/61dc29aa51bd125edcd2b82e",
+    "authenticationSettings": {},
+    "description": "Do. Or do not. There is no try.",
+    "displayName": "Star Wars API",
+    "path": "sw",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://swapi.dev/api",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

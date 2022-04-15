@@ -1,0 +1,120 @@
+openapi: 3.0.1
+info:
+  title: Basic Calculator
+  description: It's that easy. Arithmetics is just a call away!
+  version: '1.0'
+servers:
+  - url: https://pkapimlab.azure-api.net/calc
+paths:
+  /add:
+    get:
+      summary: Add two integers
+      description: Produces a sum of two numbers!
+      operationId: 61d5cc5f217d2011f40fb8f3
+      parameters:
+        - name: a
+          in: query
+          description: First operand. Default value is <code>51</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+        - name: b
+          in: query
+          description: Second operand. Default value is <code>49</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+      responses:
+        '200':
+          description: ''
+  /sub:
+    get:
+      summary: Subtract two integers
+      description: Produces a difference between two numbers.
+      operationId: 61d5cc5f217d2011f40fb8f4
+      parameters:
+        - name: a
+          in: query
+          description: First operand. Default value is <code>51</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+        - name: b
+          in: query
+          description: Second operand. Default value is <code>49</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+      responses:
+        '200':
+          description: ''
+  /mul:
+    get:
+      summary: Multiply two integers
+      description: Produces a product of two numbers.
+      operationId: 61d5cc5f217d2011f40fb8f5
+      parameters:
+        - name: a
+          in: query
+          description: First operand. Default value is <code>51</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+        - name: b
+          in: query
+          description: Second operand. Default value is <code>49</code>.
+          required: true
+          schema:
+            enum:
+              - ''
+            type: string
+      responses:
+        '200':
+          description: ''
+  /div:
+    get:
+      summary: Divide two integers
+      description: Divide two integers
+      operationId: div
+      parameters:
+        - name: a
+          in: query
+          required: true
+          schema:
+            enum:
+              - '51'
+            type: string
+        - name: b
+          in: query
+          required: true
+          schema:
+            enum:
+              - '49'
+            type: string
+            default: '49'
+      responses:
+        '200':
+          description: ''
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

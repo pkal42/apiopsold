@@ -1,6 +1,6 @@
 apimServiceName: pkapimlabprod1
 loggers:
-    - name: pkapimlab-ai
+    - name: pkapimlabprod-ai
       loggerType: applicationInsights
       description: prod app insights
       resourceId: "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlabprod-rg/providers/microsoft.insights/components/pkapimlabprod-ai"

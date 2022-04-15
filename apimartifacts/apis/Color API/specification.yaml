@@ -61,7 +61,7 @@ paths:
       parameters:
         - name: id
           in: path
-          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
+          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
           required: true
           schema:
             type: integer
@@ -78,7 +78,7 @@ paths:
       parameters:
         - name: id
           in: path
-          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
+          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
           required: true
           schema:
             type: integer
@@ -113,7 +113,7 @@ paths:
       parameters:
         - name: id
           in: path
-          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
+          description: Format - int32. Format - int32. Format - int32. Format - int32. Format - int32. Format - int32.
           required: true
           schema:
             type: integer

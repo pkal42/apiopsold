@@ -1,0 +1,10 @@
+{
+  "name": "gold-tier",
+  "properties": {
+    "displayName": "Gold Tier",
+    "approvalRequired": false,
+    "description": "Description of Gold Tier",
+    "state": "published",
+    "subscriptionRequired": true
+  }
+}

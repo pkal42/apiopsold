@@ -1,0 +1,12 @@
+{
+  "name": "pkapimlab-ai",
+  "properties": {
+    "description": "APIM Lab App Insights Logger",
+    "isBuffered": true,
+    "loggerType": "applicationInsights",
+    "resourceId": "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlab-rg/providers/microsoft.insights/components/pkapimlab-ai",
+    "credentials": {
+      "instrumentationKey": "{{Logger-Credentials--61dc313e217d2011f40fc22f}}"
+    }
+  }
+}

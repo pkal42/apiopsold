@@ -1,9 +1,0 @@
-{
-    "name": "TimeNow1",
-    "properties": {
-      "displayName": "TimeNow1",
-      "secret": false,
-      "tags": [],
-      "value": "@(DateTime.Now.ToString())"
-    }
-  }

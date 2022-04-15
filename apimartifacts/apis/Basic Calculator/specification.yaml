@@ -105,6 +105,30 @@ paths:
       responses:
         '200':
           description: ''
+  /divide:
+    get:
+      summary: Divide two integers
+      description: Divide two integers
+      operationId: divide
+      parameters:
+        - name: a
+          in: query
+          required: true
+          schema:
+            enum:
+              - '51'
+            type: string
+        - name: b
+          in: query
+          required: true
+          schema:
+            enum:
+              - '49'
+            type: string
+            default: '49'
+      responses:
+        '200':
+          description: ''
 components:
   securitySchemes:
     apiKeyHeader:

@@ -105,6 +105,13 @@ paths:
       responses:
         '200':
           description: ''
+  /powers:
+    get:
+      summary: Powers
+      operationId: powers
+      responses:
+        '200':
+          description: 
 components:
   securitySchemes:
     apiKeyHeader:

@@ -1,0 +1,12 @@
+{
+  "name": "dlproductsapi-key",
+  "properties": {
+    "displayName": "dlproductsapi-key",
+    "secret": true,
+    "tags": [
+      "key",
+      "function",
+      "auto"
+    ]
+  }
+}

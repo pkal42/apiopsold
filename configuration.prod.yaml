@@ -1,1 +1,12 @@
-apimServiceName: pkapimlab1
+apimServiceName: pkapimlabprod
+loggers:
+    - name: pkapimlab-ai
+      loggerType: applicationInsights
+      description: prod app insights
+      resourceId: "/subscriptions/fe5f965f-9f7f-4846-a2c7-957be7ad6de1/resourceGroups/pkapimlabprod-rg/providers/microsoft.insights/components/pkapimlabprod-ai"
+      credentials:
+        instrumentationKey: "a0e99ba3-5a13-4576-8367-ea19a7c82e13"
+      isBuffered: true
+diagnostics:
+   - name: applicationinsights
+     verbosity: Error

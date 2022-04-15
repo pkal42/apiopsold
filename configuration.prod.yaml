@@ -1,4 +1,4 @@
-apimServiceName: pkapimlabprod
+apimServiceName: pkapimlabprod1
 loggers:
     - name: pkapimlab-ai
       loggerType: applicationInsights

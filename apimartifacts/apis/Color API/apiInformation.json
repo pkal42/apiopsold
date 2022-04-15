@@ -1,0 +1,15 @@
+{
+  "name": "color-api",
+  "properties": {
+    "path": "color",
+    "displayName": "Color API",
+    "apiRevision": "1",
+    "description": "Taste the rainbow",
+    "isCurrent": true,
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://markcolorapi.azurewebsites.net/",
+    "subscriptionRequired": true
+  }
+}
